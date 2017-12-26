@@ -26,7 +26,7 @@ Definitions of the reference base and alternative base are the same as LINEAGE: 
 
 ## Benchmark
 
-MIST was benchmarked on a in silico synthetic community composed of 10 Staphylococcus aureus strains (NC_xxx) mixed in 10 communities, with each community containing a random subset of strains with random relative abundances (experimental_profile.txt). 
+MIST was benchmarked on an in silico synthetic community composed of 10 Staphylococcus aureus strains (NC_xxx) mixed in 10 communities, with each community containing a random subset of strains with random relative abundances (experimental_profile.txt). 
 
 Reads were simulated from the synthetic communities using MetaSim at 5x coverage and mapped back to the MetaPhlAn marker gene sequences of the 10 strains (NC_xxx.metaphlan.marker.fa), a strategy used in previous strain reconstruction tools such as Strainphlan and ConStrains. To avoid sequencing error, we generated allele count only on sites that are 1) biallelic, and 2) has at least 2x coverage of each allele in at least one of the samples. The allele counts were organized into the input files referenceCount_input.txt and alternativeCount_input.txt. 
 
