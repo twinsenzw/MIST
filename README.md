@@ -5,7 +5,7 @@ MIST (Metagenomic Inference of Strain Types) reconstructs strain haplotypes from
 
 * MIST implements Metropolis coupled Markov chain Monte Carlo [(MC)3], which runs 4 MCMC chains (1 main/cold chain and 3 heated chains) simultaneously on different threads. Briefly, (MC)3 prevents the MCMC chain from getting stuck in local optima. Please see [Altekar et al. 2004](https://academic.oup.com/bioinformatics/article/20/3/407/186341) for a detailed explanation of (MC)3.
 
-* MIST has optimized sampler schedules that have improved convergence of MCMC runs.
+* MIST has improved sampling strategies (see the figure below) that accelerate the convergence of MCMC runs. Briefly, at the beginning of the MCMC run (step < 0.2 x total steps), MIST tends to introduce big alterations into the state space, including changing all strain relative abundances in a sample, changing all SNP alleles within a range of a strain haplotype, and re-assignment of alleles across strains at a SNP locus. Then during the later steps of the MCMC run, MIST tends to introduce fine adjustments to the state space, including bitflipping one SNP locus in one strain (i.e. changing one locus from the reference base to the alternative base, or vice versa) and redistributing strain frequencies between two strains in a single sample. 
 
 * MIST only reconstructs the haplotypes but does not infer the phylogeny. This is because 1) co-estimation of haplotypes and phylogeny significantly increases the parameter space and therefore runtime, 2) the constant-population-size coalescent prior of the phylogeny, as implemented in LINEAGE, are based on assumptions (i.e. constant population size) that are often unreasonable in a microbiota, due to its dynamic temporal fluctuations. 
 
