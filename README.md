@@ -31,8 +31,8 @@ MIST was benchmarked on a in silico synthetic community composed of 10 Staphyloc
 Reads were simulated from the synthetic communities using MetaSim at 5x coverage and mapped back to the MetaPhlAn marker gene sequences of the 10 strains (NC_xxx.metaphlan.marker.fa), a strategy used in previous strain reconstruction tools such as Strainphlan and ConStrains. To avoid sequencing error, we generated allele count only on sites that are 1) biallelic, and 2) has at least 2x coverage of each allele in at least one of the samples. The allele counts were organized into the input files referenceCount_input.txt and alternativeCount_input.txt. 
 
 We ran MIST on the dataset to infer 2 to 20 strains, and determine the most likely number of strains based on the Bayes factor. The Bayes factor was estimated using an inportance sampling strategy as described in [O'Brian et al. 2014](http://www.genetics.org/content/197/3/925). Finally, the estimated strain haplotypes and their relative abundances were compared to the true haplotypes and relative abundances used to generate the synthetic communities:
-
-Left panel: strain 1~6, the 6 strains inferred by MIST. NC_xx, the 10 strains used to generate the synthetic communities.
-Upper right panel: the estimated relative abundances of the strains. The colors match the color codes in the phylogeny.
-Lower right panel: the true relative abundances of the strains that constitutes the synthetic communities. The colors match the color codes in the phylogeny.
+![alt text](https://github.com/twinsenzw/MIST/blob/master/Benchmark/bargraph_10in10_5x_6strains.svg)
+* Left panel: strain 1~6, the 6 strains inferred by MIST. NC_xx, the 10 strains used to generate the synthetic communities.
+* Upper right panel: the estimated relative abundances of the strains. The colors match the color codes in the phylogeny.
+* Lower right panel: the true relative abundances of the strains that constitutes the synthetic communities. The colors match the color codes in the phylogeny.
 
